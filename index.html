@@ -3,15 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Chatbot Game</title>
-  <link rel="stylesheet" href="style.css">
+  <title>THE COVE</title>
+  <style>
+    /* Import the custom font */
+    @font-face {
+      font-family: 'CelticHD';
+      src: url('./CELTICHD.TTF') format('truetype');
+    }
+
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: "Arial", sans-serif;
+    }
+
+    /* Background */
+    body {
+      background-color: #7d9046; /* Green background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Chat Container */
+    .chat-container {
+      width: 400px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #b3b3a3; /* Light gray */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Chatbox */
+    .chatbox {
+      flex: 1;
+      margin: 10px;
+      background-color: #d1d1c7; /* Slightly darker gray */
+      border-radius: 5px;
+      padding: 10px;
+      overflow-y: auto;
+      color: #333;
+      font-family: 'CelticHD', serif; /* Apply custom font to chatbox */
+    }
+
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f4f4f4; /* Light message bubble */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Input Bar */
+    .input-bar {
+      display: flex;
+      height: 50px;
+      background-color: #333333; /* Dark footer bar */
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Input Field */
+    .input-bar input {
+      flex: 1;
+      margin-right: 10px;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 16px;
+      background-color: transparent;
+      color: white;
+    }
+
+    /* Send Button */
+    .input-bar button {
+      width: 80px;
+      height: 100%;
+      border: none;
+      outline: none;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .input-bar button:hover {
+      background-color: #cccccc;
+    }
+  </style>
 </head>
 <body>
-  <div id="chat-container"></div>
-  <div id="input-container">
-    <input type="text" id="user-input" placeholder="Type your message here..." />
-    <button id="send-btn">Send</button>
+  <div class="chat-container">
+    <!-- Chatbox -->
+    <div class="chatbox">
+      <div class="message">
+        <strong>Narrator:</strong> 
+        Welcome, traveler! You stand at the crossroads of endless worlds, where the stars whisper secrets and ancient realms await your courage. Step forward and tell me your tale, for every word you utter shapes the destiny of a thousand lands.
+      </div>
+    </div>
+    <!-- Input Bar -->
+    <div class="input-bar">
+      <input type="text" placeholder="Type Here" />
+      <button>SEND</button>
+    </div>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
